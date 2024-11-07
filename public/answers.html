@@ -1,0 +1,27 @@
+
+Insert Code
+Edit
+Run
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respuestas</title>
+</head>
+<body>
+    <h1>Datos recibidos</h1>
+    <p>Nombres: <span id="nombres"></span></p>
+    <p>Apellidos: <span id="apellidos"></span></p>
+    <p>Edad: <span id="edad"></span></p>
+
+    <script>
+        // Aquí puedes usar JavaScript para obtener los datos del formulario y mostrarlos
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("nombres").textContent = urlParams.get('nombres');
+        document.getElementById("apellidos").textContent = urlParams.get('apellidos');
+        document.getElementById("edad").textContent = urlParams.get('edad');
+    </script>
+</body>
+</html>
